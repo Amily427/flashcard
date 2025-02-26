@@ -1,3 +1,5 @@
+
+
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -61,3 +63,8 @@ app.delete('/cards/:id', async (req, res) => {
 // 服务器监听端口
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`服务器运行在 http://localhost:${PORT}`));
+
+app.use((req, res, next) => {
+    res.setHeader('Content-Type', 'application/json');
+    next();
+});

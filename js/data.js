@@ -1,4 +1,4 @@
-const API_URL = "https://flashcard-awffhesql-flashcards-projects.vercel.app/cards";  // 本地测试
+const API_URL = "https://flashcard-fr5i1svwq-flashcards-projects.vercel.app/cards";  // 本地测试
 
 // 如果你部署到了 Vercel 或其他云端，改为你的远程 API
 // const API_URL = "https://your-vercel-app.vercel.app/cards";
