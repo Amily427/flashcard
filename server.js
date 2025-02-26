@@ -10,10 +10,17 @@ app.use(express.json());
 app.use(cors(
     {
         origin: '*', // 允许所有域访问
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        methods: ['GET', 'POST', 'PUT', 'DELETE','OPTIONS'],
         allowedHeaders: ['Content-Type']
     }
 ));
+
+// 处理 OPTIONS 预检请求
+app.options('*', cors());
+
+// 解析 JSON
+app.use(express.json());
+
 
 // 连接 MongoDB
 mongoose.connect(process.env.MONGO_URI)
