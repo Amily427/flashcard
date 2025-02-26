@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的知识卡片库 - 主页</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+    
+    body {
+      background: #f4f5f7;
+      color: #333;
+      line-height: 1.6;
+      padding-bottom: 50px;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .section-title {
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e1e4e8;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .category-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .card-image {
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .network-image {
+      background: linear-gradient(45deg, #4158D0, #C850C0);
+    }
+    
+    .database-image {
+      background: linear-gradient(45deg, #11998e, #38ef7d);
+    }
+    
+    .algorithm-image {
+      background: linear-gradient(45deg, #FF8008, #FFC837);
+    }
+    
+    .security-image {
+      background: linear-gradient(45deg, #834d9b, #d04ed6);
+    }
+    
+    .os-image {
+      background: linear-gradient(45deg, #2980B9, #6DD5FA);
+    }
+    
+    .web-image {
+      background: linear-gradient(45deg, #ee0979, #ff6a00);
+    }
+    
+    .card-content {
+      padding: 20px;
+    }
+    
+    .category-name {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    
+    .category-desc {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+      height: 60px;
+    }
+    
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+    
+    .card-count {
+      font-size: 14px;
+      color: #666;
+    }
+    
+    .card-link {
+      display: inline-block;
+      padding: 8px 20px;
+      background: #3a7bd5;
+      color: white;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    
+    .card-link:hover {
+      background: #2d62a9;
+    }
+    
+    .category-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      margin: -25px auto 15px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .icon-img {
+      width: 30px;
+      height: 30px;
+      filter: grayscale(100%);
+      opacity: 0.7;
+    }
+    
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 14px;
+    }
+    
+    @media (max-width: 768px) {
+      .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>我的知识卡片库</h1>
+      <p>按主题分类，高效学习</p>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="section-title">知识分类</div>
+    
+    <div class="category-grid">
+      <!-- 网络协议卡片 -->
+      <div class="category-card">
+        <div class="card-image network-image"></div>
+        <div class="category-icon">
+          <img src="/api/placeholder/30/30" alt="网络" class="icon-img">
+        </div>
+        <div class="card-content">
+          <h3 class="category-name">网络协议</h3>
+          <p class="category-desc">TCP/IP、HTTP、WebSocket等网络协议的基础知识与面试要点</p>
+          <div class="card-footer">
+            <span class="card-count">12张卡片</span>
+            <a href="network.html" class="card-link">查看</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 数据库卡片 -->
+      <div class="category-card">
+        <div class="card-image database-image"></div>
+        <div class="category-icon">
+          <img src="/api/placeholder/30/30" alt="数据库" class="icon-img">
+        </div>
+        <div class="card-content">
+          <h3 class="category-name">数据库</h3>
+          <p class="category-desc">SQL、NoSQL、索引优化、事务管理等数据库核心概念</p>
+          <div class="card-footer">
+            <span class="card-count">8张卡片</span>
+            <a href="database.html" class="card-link">查看</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 算法卡片 -->
+      <div class="category-card">
+        <div class="card-image algorithm-image"></div>
+        <div class="category-icon">
+          <img src="/api/placeholder/30/30" alt="算法" class="icon-img">
+        </div>
+        <div class="card-content">
+          <h3 class="category-name">算法</h3>
+          <p class="category-desc">排序、查找、动态规划、图论等算法知识与复杂度分析</p>
+          <div class="card-footer">
+            <span class="card-count">15张卡片</span>
+            <a href="algorithm.html" class="card-link">查看</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 网络安全卡片 -->
+      <div class="category-card">
+        <div class="card-image security-image"></div>
+        <div class="category-icon">
+          <img src="/api/placeholder/30/30" alt="安全" class="icon-img">
+        </div>
+        <div class="card-content">
+          <h3 class="category-name">网络安全</h3>
+          <p class="category-desc">加密技术、身份认证、常见攻击与防御措施</p>
+          <div class="card-footer">
+            <span class="card-count">6张卡片</span>
+            <a href="security.html" class="card-link">查看</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 操作系统卡片 -->
+      <div class="category-card">
+        <div class="card-image os-image"></div>
+        <div class="category-icon">
+          <img src="/api/placeholder/30/30" alt="操作系统" class="icon-img">
+        </div>
+        <div class="card-content">
+          <h3 class="category-name">操作系统</h3>
+          <p class="category-desc">进程管理、内存管理、文件系统、线程与并发</p>
+          <div class="card-footer">
+            <span class="card-count">10张卡片</span>
+            <a href="os.html" class="card-link">查看</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Web开发卡片 -->
+      <div class="category-card">
+        <div class="card-image web-image"></div>
+        <div class="category-icon">
+          <img src="/api/placeholder/30/30" alt="Web开发" class="icon-img">
+        </div>
+        <div class="card-content">
+          <h3 class="category-name">Web开发</h3>
+          <p class="category-desc">前端框架、后端技术、API设计、性能优化等</p>
+          <div class="card-footer">
+            <span class="card-count">14张卡片</span>
+            <a href="web.html" class="card-link">查看</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <p>© 2025 我的知识卡片库 - 持续更新中</p>
+  </footer>
+</body>
+</html>
