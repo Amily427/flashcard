@@ -5,7 +5,13 @@ const cors = require('cors');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: '*', // 允许所有域访问
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        allowedHeaders: ['Content-Type']
+    }
+));
 
 // 连接 MongoDB
 mongoose.connect(process.env.MONGO_URI)
