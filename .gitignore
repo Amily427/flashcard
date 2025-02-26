@@ -1,0 +1,12 @@
+# Node.js 依赖
+node_modules/
+package-lock.json
+
+# 环境变量（防止泄露数据库密码）
+.env
+
+# Vercel 部署相关（不需要上传）
+.vercel
+
+# 忽略 Angular 构建文件（如果你不想上传 Angular）
+angular/dist/

@@ -43,44 +43,7 @@
     </div>
 
     <div class="cards-grid">
-      <!-- 示例卡片：TCP三次握手 -->
-      <div class="card-container" data-category="TCP/IP">
-        <div class="card">
-          <div class="card-face card-front">
-            <div class="card-title">网络协议 | TCP/IP</div>
-            <div class="card-question">TCP 连接的三次握手（3-way handshake）的原因？</div>
-            <div class="card-footer">
-              <div class="card-tag">TCP/IP</div>
-              <div class="footer-tip">点击查看答案</div>
-            </div>
-          </div>
-          <div class="card-face card-back">
-            <div class="back-side-header">
-              <div class="back-side-title">TCP 三次握手的原因</div>
-              <div class="back-side-decoration"></div>
-            </div>
-            <div class="answer-section">
-              <div class="answer-title">核心原因</div>
-              <div class="answer-content">
-                通过三次握手，双方确认彼此已准备好发送和接收数据，从而建立可靠的连接。
-              </div>
-            </div>
-            <div class="answer-section">
-              <div class="answer-title">验证过程</div>
-              <div class="answer-content">
-                1. 客户端发送请求<br>
-                2. 服务器响应确认<br>
-                3. 客户端收到确认后建立连接
-              </div>
-            </div>
-            <div class="card-footer">
-              <div class="card-tag">TCP/IP</div>
-              <div class="footer-tip">点击返回问题</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 其他预置卡片结构同上 -->
+      <!-- 卡片列表将从 data.json 加载 -->
     </div>
   </div>
 
@@ -95,17 +58,16 @@
         <!-- 预览内容将在此显示 -->
       </div>
       <div style="margin-top:10px;">
-        <button id="submitCard">提交</button>
-        <button id="cancelCard" class="cancel-btn">取消</button>
+        <button id="submitCard" type="button">提交</button>
+        <button id="cancelCard" class="cancel-btn" type="button">取消</button>
       </div>
     </div>
   </div>
 
-  <a href="#" class="add-card-btn" title="添加新卡片">+</a>
+  <a href="#" class="add-card-btn" id="openAddCardModal" title="添加新卡片">+</a>
 
-  <!-- 引入 Firebase 库（使用 compat 版本便于使用传统写法） -->
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+  <!-- 移除 Firebase 脚本，直接加载本地 data.js -->
   <script src="js/data.js"></script>
 </body>
 
